@@ -1,0 +1,117 @@
+﻿<body>
+    @model MVCReviewSite.Models.Review
+
+    @{
+        ViewBag.Title = "Details";
+    }
+    <div class="details-page">
+        <div class="container detail-header">
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-4" id="detail-header"> @*Header for details*@
+                    <h2>Details</h2>
+                    <h3>Review By: @Html.DisplayFor(model => model.User.Name)</h3>
+                </div>
+                <div class="col-md-4"></div>
+            </div>
+        </div>
+        <p></p>
+        <div class="row head-row">
+            <div class="col-md-12">
+                <p></p>
+            </div>
+        </div>
+        <div class="row thumb">
+            <div class="col-sm-4 col-md-2">
+                <div class="thumbnail">  @*Each detail is displayed as a thumbnail*@
+                    <div class="caption">
+                        <h4>
+                            @Html.DisplayNameFor(model => model.Category.Type)
+                        </h4>
+                        <p>
+                            @Html.DisplayFor(model => model.Category.Type)
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 col-md-2">
+                <div class="thumbnail">
+                    <div class="caption">
+                        <h4>
+                            @Html.DisplayNameFor(model => model.Title)
+                        </h4>
+                        <p>
+                            @Html.DisplayFor(model => model.Title)
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 col-md-2">
+                <div class="thumbnail">
+                    <div class="caption">
+                        <h4>
+                            @Html.DisplayNameFor(model => model.ReviewDate)
+                        </h4>
+                        <p>
+                            @Html.DisplayFor(model => model.ReviewDate)
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 col-md-2">
+                <div class="thumbnail">
+                    <div class="caption">
+                        <h4>
+                            @Html.DisplayNameFor(model => model.Location)
+                        </h4>
+                        <p>
+                            @Html.DisplayFor(model => model.Location)
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 col-md-2">
+                <div class="thumbnail">
+                    <div class="caption">
+                        <h4>
+                            Reccomend Visit
+                        </h4>
+                        <p>
+                            @Html.DisplayFor(model => model.IsRecommended)
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row thumb">
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <div class="caption">
+                        <h4>
+                            @Html.DisplayNameFor(model => model.Positives)
+                        </h4>
+                        <p>
+                            @Html.DisplayFor(model => model.Positives)
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2"></div>
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <div class="caption">
+                        <h4>
+                            @Html.DisplayNameFor(model => model.Negatives)
+                        </h4>
+                        <p>
+                            @Html.DisplayFor(model => model.Negatives)
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+        <div class="row empty-row"></div>
+    </div>
+</body>
+

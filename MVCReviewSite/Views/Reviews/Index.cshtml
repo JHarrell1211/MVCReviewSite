@@ -1,0 +1,64 @@
+﻿<body>
+    @model IEnumerable<MVCReviewSite.Models.Review>
+
+    @{
+        ViewBag.Title = "Index";
+    }
+    <div class="reviews-index">
+        <div class="container review-container">
+            <div class="row">
+                <div class="col-sm-5 col-md-4">
+                    <h2>Reviews</h2>
+                    <p>
+                        @Html.ActionLink("Create New", "Create")
+                    </p>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">    @*Reviews are split up with basic info in one column and review info in the other*@
+                    @foreach (var item in Model)
+                    {
+                        <div class="col-sm-4 col-md-3 review-col">
+                            <p id="top">
+                                @Html.DisplayFor(modelItem => item.User.Name), @Html.DisplayFor(modelItem => item.ReviewDate)
+
+                            </p>
+                            <p>
+                                @Html.DisplayNameFor(model => model.Location) : @Html.DisplayFor(modelItem => item.Location)
+                            </p>
+                            <p>
+                                Reccomend Visit : @Html.DisplayFor(modelItem => item.IsRecommended)
+                            </p>
+                        </div>
+                        <div class="col-md-1">   </div>
+                        <div class="col-sm-8 col-md-8 reviewinfo">
+                            <h3>
+                                "@Html.DisplayFor(modelItem => item.Title)"
+                            </h3>
+                            <h4>
+                                @Html.DisplayNameFor(model => model.Positives)
+                            </h4>
+                            <p>
+                                @Html.DisplayFor(modelItem => item.Positives)
+                            </p>
+                            <h4>
+                                @Html.DisplayNameFor(model => model.Negatives)
+                            </h4>
+                            <p>
+                                @Html.DisplayFor(modelItem => item.Negatives)
+                            </p>
+
+                            <button type="button" class="btn btn-warning">@Html.ActionLink("Edit", "Edit", new { id = item.ReviewID }) </button>
+                            <button type="button" class="btn btn-danger">@Html.ActionLink("Details", "Details", new { id = item.ReviewID }) </button>
+                            <button type="button" class="btn btn-success">@Html.ActionLink("Delete", "Delete", new { id = item.ReviewID })</button>
+
+                            <p></p>
+                            <hr />
+                            <p></p>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

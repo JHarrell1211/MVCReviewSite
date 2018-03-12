@@ -1,0 +1,151 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.homepage {
+    display: block;
+    position: relative;
+}
+
+/*background image is separate so that it can be semi transparent, this allows text to not be affected*/ 
+.homepage::after{
+    content: "";
+    background-image: url('Images/pexels-photo-338515.jpeg');
+    background-size: cover;
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+.home-top{
+    margin-top: 100px;
+}
+
+#travel {
+    font-family: Georgia;
+    font-size: 48px;
+}
+#travel-text{
+    font-family: Georgia;
+    font-size: 32px;
+}
+
+.home-header{
+    text-align: center;
+}
+
+.nav-row{
+    margin-top: 100px;           
+}
+
+.review-container{
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.review-container h3{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 20px;
+}
+
+.reviews-index {
+    display: block;
+    position: relative;
+}
+
+    .reviews-index::after {
+        content: "";
+        background-image: url('Images/pexels-photo-235648.jpeg');
+        background-size: cover;
+        background-attachment: fixed;
+        opacity: 0.5;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+        z-index: -1;
+    }   
+
+
+
+.reviewinfo {
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.review-col {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 800;
+    font-size: 16px;
+}
+
+h2{
+    margin-top: 0;
+}
+
+#top{
+    margin-top: 60px;
+}
+.details-page {
+    position: relative;
+    display: block;
+}
+.details-page::after {
+    content: "";
+    background-image: url('Images/pexels-photo-248771.jpeg');
+    background-size: cover;
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+#detail-header {
+    color: white;
+    text-align: center;
+}
+
+
+.head-row {
+    margin-left: 80px;
+}
+.thumb {
+    margin-left: 110px;
+}
+.thumbnail {
+    background-color: lightsteelblue;
+    border-radius: 50% / 10%;
+    color: white;
+    text-align: center;
+    text-indent: .1em;
+}
+
+.thumbnail:before {
+        position: absolute;
+        top: 10%;
+        bottom: 10%;
+        right: -5%;
+        left: -5%;
+        background: inherit;
+        border-radius: 5% / 50%;
+    }
+
+.empty-row {
+    height: 200px;
+}
+
